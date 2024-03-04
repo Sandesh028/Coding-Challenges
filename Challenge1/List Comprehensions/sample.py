@@ -27,6 +27,6 @@
 # print(larger_words)
 
 # Divisible by Both 2 and 3: From a list of numbers from 1 to 30, create a list of numbers that are divisible by both 2 and 3.
-num = list(range(1, 31))
-div = [i for i in num if i % 2 == 0 and i % 3 == 0]
-print(div)
+# num = list(range(1, 31))
+# div = [i for i in num if i % 2 == 0 and i % 3 == 0]
+# print(div)
