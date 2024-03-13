@@ -30,8 +30,8 @@ class Solution:
             
         return total
     
-sol = Solution()
-print(sol.romanToInt("II"))    # Output: 3
-print(sol.romanToInt("LVIII"))  # Output: 58
-print(sol.romanToInt("MCMXCIV"))# Output: 1994
+# sol = Solution()
+# print(sol.romanToInt("II"))    # Output: 3
+# print(sol.romanToInt("LVIII"))  # Output: 58
+# print(sol.romanToInt("MCMXCIV"))# Output: 1994
         
