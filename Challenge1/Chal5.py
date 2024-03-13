@@ -20,21 +20,18 @@
 class Solution:
     def romanToInt(self,s: str) -> int:
         romanMap = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000}
-        total = 0
-        pre_val = 0
+        total = romanMap[s[-1]]
         
-        for symbol in s: 
-            value = romanMap[symbol] 
-            total += value
+        for i in range(len(s) -2,-1,-1):
+            if romanMap[s[i]] < romanMap[s[i + 1]]:
+                total -= romanMap[s[i]]
+            else:
+                total += romanMap[s[i]]
             
-            if pre_val < value:
-                total -= 2 * pre_val
-                
-            pre_val = value
         return total
     
 sol = Solution()
-print(sol.romanToInt("III"))    # Output: 3
+print(sol.romanToInt("II"))    # Output: 3
 print(sol.romanToInt("LVIII"))  # Output: 58
 print(sol.romanToInt("MCMXCIV"))# Output: 1994
         
